@@ -1,0 +1,21 @@
+h1. sinatra-xslttrans
+
+This is a proof-of-concept webservice (Sinatra/Ruby) to demonstrate on-the-fly XSLT transformations of
+remote XML data with locally available XSLT transforms.
+
+h2. Install
+
+<pre>
+gem install bundler rake --no-ri --no-rdoc   # optional
+git clone https://github.com/mstrauss/sinatra-xslttrans.git
+cd sinatra-xslttrans
+bundle install
+rake run
+</pre>
+  
+h2. Usage
+
+A very simple example transform to convert "Redmine's":http://www.redmine.org issues into HTML is included: issues.xslt.
+To use it "call":http://localhost:4567/issues?http://www.redmine.org/projects/redmine/issues.xml:
+  
+<pre>http://localhost:4567/issues?http://www.redmine.org/projects/redmine/issues.xml</pre>
