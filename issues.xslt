@@ -6,13 +6,13 @@
       <head>
       </head>
       <body>
-        <h2>Issues</h2>
-        <table border="1">
+        <table cellspacing="1" cellpadding="4" class="foswikiTable" rules="none" border="1">
           <tr>
             <th>Id</th>
             <th>Status</th>
-            <th>Start Date</th>
+            <th>Priority</th>
             <th>Subject</th>
+            <th>Start Date</th>
           </tr>
           <xsl:for-each select="issues/issue">
             <tr>
@@ -23,10 +23,13 @@
                 <xsl:value-of select="status/@name"/>
               </td>
               <td>
-                <xsl:value-of select="start_date"/>
+                <xsl:value-of select="priority/@name"/>
               </td>
               <td>
                 <xsl:value-of select="subject"/>
+              </td>
+              <td>
+                <xsl:value-of select="start_date"/>
               </td>
             </tr>
           </xsl:for-each>
