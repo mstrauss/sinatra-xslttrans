@@ -17,7 +17,12 @@
           <xsl:for-each select="issues/issue">
             <tr>
               <td>
-                <xsl:value-of select="id"/>
+                <a>
+                  <xsl:attribute name="href">
+                    http://redmine.org/issues/<xsl:value-of select="id"/>
+                  </xsl:attribute>
+                  <xsl:value-of select="id"/>
+                </a>
               </td>
               <td>
                 <xsl:value-of select="status/@name"/>
